@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Metrics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        canvas {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>System Metrics</h1>
+    <div class="metric">
+        <p>CPU Percent: <span id="cpuPercent">{{ value1 }}%</span></p>
+    </div>
+    <div class="metric">
+        <p>Memory Percent: <span id="memPercent">{{ value2 }}%</span></p>
+    </div>
+    <div class="local-ip">
+        <p> Server IP = {{ ip }}</p>
+    </div>
+    {% if massage %}
+    <div class="message">
+        <p>{{ massage }}</p>
+    </div>
+    {% endif %}
+
+    <canvas id="metricsChart" width="275" height="112"></canvas>
+
+    <script>
+        const ctx = document.getElementById('metricsChart').getContext('2d');
+        const metricsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['CPU', 'Memory'],
+                datasets: [{
+                    label: 'Usage (%)',
+                    data: [{{ value1 }}, {{ value2 }}],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)'   
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+        <script>
+            function refreshPage() {
+                location.reload();
+            }    
+            setInterval(refreshPage, 1000);
+        </script>
+</body>
+</html>

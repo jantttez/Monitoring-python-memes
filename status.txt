@@ -1,0 +1,12 @@
+ M .gitignore
+ M Dockerfile
+ M app.py
+ M bot_configur.py
+ M requirements.txt
+ M templates/index.html
+ M web.py
+?? README.md
+?? imgs/
+?? push.sh
+?? start_web.sh
+?? status.txt

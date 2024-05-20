@@ -1,8 +1,9 @@
 fastapi
+
 psutil
 
 telebot
 
 uvicorn
-
+gunicorn
 

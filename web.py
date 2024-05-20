@@ -29,12 +29,10 @@ def metrics(request: Request):
     mem_percent = psutil.virtual_memory().percent
     message = None
     if cpu_percent > 80 or mem_percent > 80:
-        Alert.alert(f"High CPU or memory utilization! CPU={cpu_percent}%, memory={mem_percent}%")
+        Alert.alert(f"High CPU or memory utilization! CPU={cpu_percent}%, memory={mem_percent}% on server {local_ip}")
         message = "High CPU or memory utilization!"
     return templates.TemplateResponse("index.html", {"request": request, "value1": cpu_percent, "value2": mem_percent, "ip": local_ip, "massage": message})
 
 
-if __name__ == "__main__":
-    uvicorn.run(app="web:app")
 
 

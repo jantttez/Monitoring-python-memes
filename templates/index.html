@@ -11,7 +11,7 @@
             margin: 20px;
         }
         h1 {
-            color: #333;
+            color: black;
         }
         canvas {
             margin-top: 20px;
@@ -35,7 +35,7 @@
     </div>
     {% endif %}
 
-    <canvas id="metricsChart" width="275" height="112"></canvas>
+    <canvas id="metricsChart" width="275" height="100"></canvas>
 
     <script>
         const ctx = document.getElementById('metricsChart').getContext('2d');
@@ -72,7 +72,7 @@
             function refreshPage() {
                 location.reload();
             }    
-            setInterval(refreshPage, 1000);
+            setInterval(refreshPage, 2500);
         </script>
 </body>
 </html>

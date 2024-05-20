@@ -14,7 +14,7 @@
 
 
 
-## How alerts look like in tg
+## How alerts look like in telegram chat
 
 ![alerts](./imgs/alerts.png)
 

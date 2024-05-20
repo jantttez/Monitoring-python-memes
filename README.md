@@ -1,20 +1,20 @@
-#ultra mem monitoring web + app with on telegram chat
+# Ultra mem monitoring web + app with on telegram chat
 
 
-##WEB version
+## WEB version
 
 ![web](./imgs/web.png)
 
 
 
-##CONSOLE version
+## CONSOLE version
 
 ![app](./imgs/app.png)
 
 
 
 
-##How alerts look like in tg
+## How alerts look like in tg
 
 ![alerts](./imgs/alerts.png)
 

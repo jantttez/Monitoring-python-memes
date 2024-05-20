@@ -18,3 +18,5 @@ else
   git push origin main
   echo "Pushing completed"
 fi
+
+#в дальнейшем можно разтурбировать чтоб в новую бранчу комитеть

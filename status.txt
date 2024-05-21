@@ -1,2 +1,4 @@
  M README.md
+ M build.sh
+ M push.sh
  M status.txt

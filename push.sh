@@ -7,7 +7,7 @@ FILE_PATH="./status.txt"
 if [ ! -e "status.txt" ]; then
   touch status.txt
 else 
- echo "status.txt was have"
+ echo "status.txt was have in repo"
 fi
 
 

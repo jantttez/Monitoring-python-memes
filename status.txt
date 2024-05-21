@@ -1,3 +1,2 @@
- M .gitignore
  M push.sh
-?? status.txt
+ M status.txt

@@ -1,4 +1,3 @@
- M README.md
- M build.sh
+ M .gitignore
  M push.sh
  M status.txt
